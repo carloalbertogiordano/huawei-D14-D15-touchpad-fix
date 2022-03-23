@@ -1,0 +1,10 @@
+[Unit]
+Description=Local system resume actions
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/modprobe i2c_hid_acpi i2c_hid
+
+[Install]
+WantedBy=suspend.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Local system suspend actions
+Before=sleep.target
+
+[Service]
+Type=simple
+ExecStart=-/usr/bin/modprobe -r i2c_hid_acpi i2c_hid
+
+[Install]
+WantedBy=sleep.target
