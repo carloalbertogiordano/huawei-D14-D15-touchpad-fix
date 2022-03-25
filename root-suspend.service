@@ -4,7 +4,7 @@ Before=sleep.target
 
 [Service]
 Type=simple
-ExecStart=-/usr/bin/modprobe -r i2c_hid_acpi i2c_hid
+ExecStart=/usr/sbin/rmmod -r i2c_hid_acpi i2c_hid
 
 [Install]
 WantedBy=sleep.target
